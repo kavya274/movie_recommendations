@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Mad Max: Fury Road backdrop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#582e10"/>
+      <stop offset="52%" stop-color="#28160b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#e0701f" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#e0701f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#e99b62" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#7d4014" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0b88f" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#e0701f" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-mad-max-fury-road-b" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="992" cy="324" rx="736" ry="558" fill="url(#glow)"/>
+  <g>
+    <path d="M -20 539.1 C 416 360.9 992 561.375 1620 418.815 L 1620 920 L -20 920 Z" fill="#683512" fill-opacity="0.92"/>
+    <path d="M -20 539.1 C 416 360.9 992 561.375 1620 418.815 L 1620 920 L -20 920 Z" fill="none" stroke="#eeb084" stroke-opacity="0.2" stroke-width="1.215"/>
+    <path d="M -20 598.5 C 416 441.90000000000003 992 618.075 1620 492.7950000000001 L 1620 920 L -20 920 Z" fill="#572d10" fill-opacity="0.87"/>
+    <path d="M -20 598.5 C 416 441.90000000000003 992 618.075 1620 492.7950000000001 L 1620 920 L -20 920 Z" fill="none" stroke="#eeb084" stroke-opacity="0.17" stroke-width="1.215"/>
+    <path d="M -20 657.9 C 416 522.9 992 674.775 1620 566.775 L 1620 920 L -20 920 Z" fill="#46250e" fill-opacity="0.8200000000000001"/>
+    <path d="M -20 657.9 C 416 522.9 992 674.775 1620 566.775 L 1620 920 L -20 920 Z" fill="none" stroke="#eeb084" stroke-opacity="0.14" stroke-width="1.215"/>
+    <path d="M -20 717.3000000000001 C 416 603.9 992 731.475 1620 640.755 L 1620 920 L -20 920 Z" fill="#361d0c" fill-opacity="0.77"/>
+    <path d="M -20 717.3000000000001 C 416 603.9 992 731.475 1620 640.755 L 1620 920 L -20 920 Z" fill="none" stroke="#eeb084" stroke-opacity="0.11000000000000001" stroke-width="1.215"/>
+    <path d="M -20 776.6999999999999 C 416 684.9 992 788.175 1620 714.7349999999999 L 1620 920 L -20 920 Z" fill="#25140b" fill-opacity="0.72"/>
+    <path d="M -20 776.6999999999999 C 416 684.9 992 788.175 1620 714.7349999999999 L 1620 920 L -20 920 Z" fill="none" stroke="#eeb084" stroke-opacity="0.08000000000000002" stroke-width="1.215"/>
+    <circle cx="1056" cy="271.8" r="78.30000000000001" fill="#eeb084" fill-opacity="0.2"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#vig)"/>
+  <rect y="360" width="1600" height="540" fill="url(#scrim)"/>
+  <rect width="1152" height="900" fill="url(#sideScrim)"/>
+  <rect width="1600" height="900" filter="url(#grain-mad-max-fury-road-b)" opacity="0.05"/>
+</svg>

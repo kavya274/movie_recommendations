@@ -1,0 +1,65 @@
+{% load static movie_extras %}{% comment %}
+The single movie tile used by every rail and grid.
+
+Context:
+  movie       (required)
+  reason      why this movie was surfaced — printed under the meta line
+  score       ranker confidence, rendered as "97% match" when `show_match`
+  show_match  bool
+  priority    load the poster eagerly (above-the-fold rails)
+
+The whole card is one stretched link, with the watchlist quick action layered
+above it — so the hit target is the card, but the quick action still works.
+{% endcomment %}
+<article class="card">
+  <div class="card-art">
+    <div class="poster">
+      <img src="{% static movie.poster %}" alt="{{ movie.title }} poster"
+           loading="{% if priority %}eager{% else %}lazy{% endif %}" decoding="async"
+           onload="this.classList.add('is-loaded')">
+    </div>
+    <div class="card-scrim" aria-hidden="true"></div>
+
+    {% if movie.slug in library.watched_slugs %}
+      <span class="badge badge-watched" data-watched-badge title="You've watched this">
+        <svg class="icon icon-sm"><use href="#i-check"></use></svg>Watched
+      </span>
+    {% endif %}
+
+    <form class="quick-add-form" method="post" action="{% url 'library:toggle_watchlist' movie.slug %}"
+          data-library-form data-slug="{{ movie.slug }}">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.get_full_path }}">
+      {% if movie.slug in library.watchlist_slugs %}
+        <button type="submit" class="quick-add" aria-pressed="true"
+                aria-label="Remove {{ movie.title }} from watchlist">
+          <svg class="icon"><use href="#i-check"></use></svg>
+        </button>
+      {% else %}
+        <button type="submit" class="quick-add" aria-pressed="false"
+                aria-label="Add {{ movie.title }} to watchlist">
+          <svg class="icon"><use href="#i-plus"></use></svg>
+        </button>
+      {% endif %}
+    </form>
+
+    {% if show_match and score %}
+      <span class="badge badge-match">{{ score|match }}</span>
+    {% endif %}
+  </div>
+
+  <div class="card-body">
+    <h3 class="card-title">{{ movie.title }}</h3>
+    <div class="card-meta">
+      <span class="tabular">{{ movie.year }}</span>
+      <span aria-hidden="true">·</span>
+      <span class="genre">{{ movie.primary_genre }}</span>
+      <span class="rating">{{ movie.rating|rating }}<span class="sr-only"> out of 10</span></span>
+    </div>
+    {% if show_reasons and reason %}<p class="card-reason" title="{{ reason }}">{{ reason }}</p>{% endif %}
+  </div>
+
+  <a href="{{ movie.get_absolute_url }}" class="card-link" aria-label="{{ movie.title }}, {{ movie.year }}">
+    <span class="sr-only">View details</span>
+  </a>
+</article>

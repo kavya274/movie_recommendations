@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Gravity backdrop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#1b3046"/>
+      <stop offset="52%" stop-color="#0e1722"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#3f76ad" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#3f76ad" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#799fc6" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#254362" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9fbbd6" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#3f76ad" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-gravity-b" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="992" cy="324" rx="736" ry="558" fill="url(#glow)"/>
+  <g>
+    <circle cx="1056" cy="396" r="202.5" fill="url(#orbFill)"/>
+    <circle cx="1056" cy="396" r="202.5" fill="none" stroke="#95b4d2" stroke-opacity="0.5" stroke-width="1.62"/>
+    <circle cx="1056" cy="396" r="259.2" fill="none" stroke="#95b4d2" stroke-opacity="0.13" stroke-width="1.215"/>
+    <ellipse cx="1056" cy="396" rx="328.05" ry="40.5" fill="none" stroke="#95b4d2" stroke-opacity="0.22" stroke-width="1.215" transform="rotate(-14 1056 396)"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#vig)"/>
+  <rect y="360" width="1600" height="540" fill="url(#scrim)"/>
+  <rect width="1152" height="900" fill="url(#sideScrim)"/>
+  <rect width="1600" height="900" filter="url(#grain-gravity-b)" opacity="0.05"/>
+</svg>

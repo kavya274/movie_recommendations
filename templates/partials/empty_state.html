@@ -1,0 +1,12 @@
+{% comment %}
+Shown wherever a list can legitimately be empty (watchlist, filters, search).
+
+Context: `icon` (sprite id without the `i-` prefix), `title`, `description`,
+and an optional `action_url` / `action_label` pair.
+{% endcomment %}
+<div class="empty">
+  <div class="empty-icon"><svg class="icon icon-md"><use href="#i-{{ icon|default:'film' }}"></use></svg></div>
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+  {% if action_url %}<a href="{{ action_url }}" class="btn btn-primary btn-sm">{{ action_label }}</a>{% endif %}
+</div>

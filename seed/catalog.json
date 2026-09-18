@@ -1,0 +1,1045 @@
+{
+  "movies": [
+    {
+      "id": "interstellar",
+      "title": "Interstellar",
+      "year": 2014,
+      "rating": 8.7,
+      "runtime": 169,
+      "poster": "/posters/interstellar.svg",
+      "backdrop": "/backdrops/interstellar.svg",
+      "tagline": "Mankind was born on Earth. It was never meant to die here.",
+      "description": "With Earth's harvests failing, a former pilot leaves his family behind and steers a crew through a wormhole in search of a world that can still hold life. The further he travels, the more time itself becomes the thing he cannot afford.",
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Matthew McConaughey",
+        "Anne Hathaway",
+        "Jessica Chastain",
+        "Michael Caine"
+      ],
+      "similarTo": [
+        "arrival",
+        "the-martian",
+        "gravity",
+        "inception",
+        "blade-runner-2049",
+        "dune"
+      ]
+    },
+    {
+      "id": "inception",
+      "title": "Inception",
+      "year": 2010,
+      "rating": 8.8,
+      "runtime": 148,
+      "poster": "/posters/inception.svg",
+      "backdrop": "/backdrops/inception.svg",
+      "tagline": "Your mind is the scene of the crime.",
+      "description": "A thief who steals secrets from inside dreams is offered a way home: instead of taking an idea, he has to leave one behind. The job needs a dream within a dream, and his own memories keep breaking the architecture.",
+      "genres": [
+        "Sci-Fi",
+        "Action",
+        "Thriller"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Leonardo DiCaprio",
+        "Joseph Gordon-Levitt",
+        "Elliot Page",
+        "Tom Hardy"
+      ],
+      "similarTo": [
+        "the-prestige",
+        "memento",
+        "interstellar",
+        "the-dark-knight",
+        "ex-machina"
+      ]
+    },
+    {
+      "id": "the-prestige",
+      "title": "The Prestige",
+      "year": 2006,
+      "rating": 8.5,
+      "runtime": 130,
+      "poster": "/posters/the-prestige.svg",
+      "backdrop": "/backdrops/the-prestige.svg",
+      "tagline": "Are you watching closely?",
+      "description": "Two Victorian stage magicians turn a friendly rivalry into a decade-long war of sabotage over a single vanishing trick. Each is certain the other is hiding a method, and both are right.",
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Thriller"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Christian Bale",
+        "Hugh Jackman",
+        "Scarlett Johansson",
+        "Michael Caine"
+      ],
+      "similarTo": [
+        "inception",
+        "memento",
+        "shutter-island",
+        "zodiac"
+      ]
+    },
+    {
+      "id": "arrival",
+      "title": "Arrival",
+      "year": 2016,
+      "rating": 7.9,
+      "runtime": 116,
+      "poster": "/posters/arrival.svg",
+      "backdrop": "/backdrops/arrival.svg",
+      "tagline": "Why are they here?",
+      "description": "Twelve craft settle over the Earth and say nothing anyone can parse. A linguist is brought in to build a first vocabulary, and learning it starts to rearrange how she experiences her own life.",
+      "genres": [
+        "Sci-Fi",
+        "Drama",
+        "Mystery"
+      ],
+      "director": "Denis Villeneuve",
+      "actors": [
+        "Amy Adams",
+        "Jeremy Renner",
+        "Forest Whitaker",
+        "Michael Stuhlbarg"
+      ],
+      "similarTo": [
+        "interstellar",
+        "annihilation",
+        "ex-machina",
+        "blade-runner-2049",
+        "her"
+      ]
+    },
+    {
+      "id": "the-martian",
+      "title": "The Martian",
+      "year": 2015,
+      "rating": 8,
+      "runtime": 144,
+      "poster": "/posters/the-martian.svg",
+      "backdrop": "/backdrops/the-martian.svg",
+      "tagline": "Bring him home.",
+      "description": "Left for dead after a storm forces his crew to abort, a botanist has to farm a dead planet with what the mission happened to leave behind. Survival becomes a sequence of very stubborn engineering problems.",
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "director": "Ridley Scott",
+      "actors": [
+        "Matt Damon",
+        "Jessica Chastain",
+        "Chiwetel Ejiofor",
+        "Kristen Wiig"
+      ],
+      "similarTo": [
+        "interstellar",
+        "gravity",
+        "dune",
+        "arrival"
+      ]
+    },
+    {
+      "id": "blade-runner-2049",
+      "title": "Blade Runner 2049",
+      "year": 2017,
+      "rating": 8,
+      "runtime": 164,
+      "poster": "/posters/blade-runner-2049.svg",
+      "backdrop": "/backdrops/blade-runner-2049.svg",
+      "tagline": "The key to the future is finally unearthed.",
+      "description": "A replicant detective retires his own kind for a living until a buried case suggests a birth that should have been impossible. Tracing it back means finding a man who disappeared thirty years ago.",
+      "genres": [
+        "Sci-Fi",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Denis Villeneuve",
+      "actors": [
+        "Ryan Gosling",
+        "Harrison Ford",
+        "Ana de Armas",
+        "Jared Leto"
+      ],
+      "similarTo": [
+        "arrival",
+        "dune",
+        "ex-machina",
+        "her",
+        "annihilation"
+      ]
+    },
+    {
+      "id": "dune",
+      "title": "Dune",
+      "year": 2021,
+      "rating": 8,
+      "runtime": 155,
+      "poster": "/posters/dune.svg",
+      "backdrop": "/backdrops/dune.svg",
+      "tagline": "Beyond fear, destiny awaits.",
+      "description": "A ducal heir is handed stewardship of the only planet that produces the empire's most valuable substance, and with it a trap generations in the making. What survives the ambush is a boy walking into the desert.",
+      "genres": [
+        "Sci-Fi",
+        "Drama"
+      ],
+      "director": "Denis Villeneuve",
+      "actors": [
+        "Timothée Chalamet",
+        "Rebecca Ferguson",
+        "Oscar Isaac",
+        "Zendaya"
+      ],
+      "similarTo": [
+        "blade-runner-2049",
+        "interstellar",
+        "arrival",
+        "the-martian"
+      ]
+    },
+    {
+      "id": "ex-machina",
+      "title": "Ex Machina",
+      "year": 2014,
+      "rating": 7.7,
+      "runtime": 108,
+      "poster": "/posters/ex-machina.svg",
+      "backdrop": "/backdrops/ex-machina.svg",
+      "tagline": "There is nothing more human than the will to survive.",
+      "description": "A young coder wins a week at his reclusive employer's estate and finds the prize is a test: decide whether the machine upstairs is a person. She has been preparing for the interview far longer than he has.",
+      "genres": [
+        "Sci-Fi",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Alex Garland",
+      "actors": [
+        "Alicia Vikander",
+        "Domhnall Gleeson",
+        "Oscar Isaac",
+        "Sonoya Mizuno"
+      ],
+      "similarTo": [
+        "annihilation",
+        "her",
+        "arrival",
+        "blade-runner-2049"
+      ]
+    },
+    {
+      "id": "gravity",
+      "title": "Gravity",
+      "year": 2013,
+      "rating": 7.7,
+      "runtime": 91,
+      "poster": "/posters/gravity.svg",
+      "backdrop": "/backdrops/gravity.svg",
+      "tagline": "Don't let go.",
+      "description": "Debris tears through a routine spacewalk and leaves two astronauts attached to nothing at all. Getting down means crossing open orbit on whatever fuel and nerve is left.",
+      "genres": [
+        "Sci-Fi",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Alfonso Cuarón",
+      "actors": [
+        "Sandra Bullock",
+        "George Clooney",
+        "Ed Harris"
+      ],
+      "similarTo": [
+        "interstellar",
+        "the-martian",
+        "arrival"
+      ]
+    },
+    {
+      "id": "annihilation",
+      "title": "Annihilation",
+      "year": 2018,
+      "rating": 6.8,
+      "runtime": 115,
+      "poster": "/posters/annihilation.svg",
+      "backdrop": "/backdrops/annihilation.svg",
+      "tagline": "Fear what's inside.",
+      "description": "A biologist joins the latest team sent into a stretch of coast where the laws of biology have begun rewriting themselves. Everything inside is copying everything else, including the people walking through it.",
+      "genres": [
+        "Sci-Fi",
+        "Mystery",
+        "Thriller"
+      ],
+      "director": "Alex Garland",
+      "actors": [
+        "Natalie Portman",
+        "Jennifer Jason Leigh",
+        "Tessa Thompson",
+        "Oscar Isaac"
+      ],
+      "similarTo": [
+        "ex-machina",
+        "arrival",
+        "blade-runner-2049",
+        "shutter-island"
+      ]
+    },
+    {
+      "id": "memento",
+      "title": "Memento",
+      "year": 2000,
+      "rating": 8.4,
+      "runtime": 113,
+      "poster": "/posters/memento.svg",
+      "backdrop": "/backdrops/memento.svg",
+      "tagline": "Some memories are best forgotten.",
+      "description": "A man who can no longer form new memories hunts his wife's killer using tattoos, photographs and notes to himself. The system works right up until someone realises he can be written to.",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Guy Pearce",
+        "Carrie-Anne Moss",
+        "Joe Pantoliano"
+      ],
+      "similarTo": [
+        "the-prestige",
+        "inception",
+        "shutter-island",
+        "se7en"
+      ]
+    },
+    {
+      "id": "shutter-island",
+      "title": "Shutter Island",
+      "year": 2010,
+      "rating": 8.2,
+      "runtime": 138,
+      "poster": "/posters/shutter-island.svg",
+      "backdrop": "/backdrops/shutter-island.svg",
+      "tagline": "Someone is missing.",
+      "description": "Two marshals sail out to a hospital for the criminally insane to find a patient who walked out of a locked room. A storm closes the harbour, and every answer the staff offers is worse than the last.",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Martin Scorsese",
+      "actors": [
+        "Leonardo DiCaprio",
+        "Mark Ruffalo",
+        "Ben Kingsley",
+        "Michelle Williams"
+      ],
+      "similarTo": [
+        "memento",
+        "prisoners",
+        "se7en",
+        "zodiac"
+      ]
+    },
+    {
+      "id": "gone-girl",
+      "title": "Gone Girl",
+      "year": 2014,
+      "rating": 8.1,
+      "runtime": 149,
+      "poster": "/posters/gone-girl.svg",
+      "backdrop": "/backdrops/gone-girl.svg",
+      "tagline": "You don't know what you've got 'til it's gone.",
+      "description": "A wife disappears on the morning of her fifth anniversary and her husband gives one bad interview too many. The case turns into a performance, and both of them know exactly who the audience is.",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Drama"
+      ],
+      "director": "David Fincher",
+      "actors": [
+        "Rosamund Pike",
+        "Ben Affleck",
+        "Carrie Coon",
+        "Neil Patrick Harris"
+      ],
+      "similarTo": [
+        "zodiac",
+        "se7en",
+        "prisoners",
+        "shutter-island"
+      ]
+    },
+    {
+      "id": "prisoners",
+      "title": "Prisoners",
+      "year": 2013,
+      "rating": 8.2,
+      "runtime": 153,
+      "poster": "/posters/prisoners.svg",
+      "backdrop": "/backdrops/prisoners.svg",
+      "tagline": "Every moment matters.",
+      "description": "When two girls vanish on Thanksgiving and the only suspect is released, one father decides he will get the answer himself. The detective still working the case watches the town become the thing it is afraid of.",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Drama"
+      ],
+      "director": "Denis Villeneuve",
+      "actors": [
+        "Hugh Jackman",
+        "Jake Gyllenhaal",
+        "Viola Davis",
+        "Paul Dano"
+      ],
+      "similarTo": [
+        "zodiac",
+        "sicario",
+        "gone-girl",
+        "se7en"
+      ]
+    },
+    {
+      "id": "zodiac",
+      "title": "Zodiac",
+      "year": 2007,
+      "rating": 7.7,
+      "runtime": 157,
+      "poster": "/posters/zodiac.svg",
+      "backdrop": "/backdrops/zodiac.svg",
+      "tagline": "There's more than one way to lose your life to a killer.",
+      "description": "A cartoonist, a reporter and two detectives spend years on a killer who writes letters and is never caught. The obsession outlasts the case, the marriages and most of the evidence.",
+      "genres": [
+        "Mystery",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "David Fincher",
+      "actors": [
+        "Jake Gyllenhaal",
+        "Mark Ruffalo",
+        "Robert Downey Jr.",
+        "Anthony Edwards"
+      ],
+      "similarTo": [
+        "se7en",
+        "prisoners",
+        "gone-girl",
+        "memento"
+      ]
+    },
+    {
+      "id": "se7en",
+      "title": "Se7en",
+      "year": 1995,
+      "rating": 8.6,
+      "runtime": 127,
+      "poster": "/posters/se7en.svg",
+      "backdrop": "/backdrops/se7en.svg",
+      "tagline": "Seven deadly sins. Seven ways to die.",
+      "description": "A retiring detective and his replacement work a murder series staged around the deadly sins in a city where it will not stop raining. The killer is several moves ahead and intends to be found.",
+      "genres": [
+        "Thriller",
+        "Mystery",
+        "Drama"
+      ],
+      "director": "David Fincher",
+      "actors": [
+        "Brad Pitt",
+        "Morgan Freeman",
+        "Gwyneth Paltrow",
+        "Kevin Spacey"
+      ],
+      "similarTo": [
+        "zodiac",
+        "gone-girl",
+        "prisoners",
+        "shutter-island"
+      ]
+    },
+    {
+      "id": "the-dark-knight",
+      "title": "The Dark Knight",
+      "year": 2008,
+      "rating": 9,
+      "runtime": 152,
+      "poster": "/posters/the-dark-knight.svg",
+      "backdrop": "/backdrops/the-dark-knight.svg",
+      "tagline": "Welcome to a world without rules.",
+      "description": "Gotham's organised crime is nearly finished when a man in face paint offers the city a different kind of deal. He does not want money — he wants to prove that everyone breaks.",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Christopher Nolan",
+      "actors": [
+        "Christian Bale",
+        "Heath Ledger",
+        "Aaron Eckhart",
+        "Gary Oldman"
+      ],
+      "similarTo": [
+        "heat",
+        "inception",
+        "sicario",
+        "se7en"
+      ]
+    },
+    {
+      "id": "mad-max-fury-road",
+      "title": "Mad Max: Fury Road",
+      "year": 2015,
+      "rating": 8.1,
+      "runtime": 120,
+      "poster": "/posters/mad-max-fury-road.svg",
+      "backdrop": "/backdrops/mad-max-fury-road.svg",
+      "tagline": "What a lovely day.",
+      "description": "A war rig turns off the road it was sent down, carrying five women away from the warlord who owned them. Everything after that is one chase across the desert and back again.",
+      "genres": [
+        "Action",
+        "Sci-Fi",
+        "Thriller"
+      ],
+      "director": "George Miller",
+      "actors": [
+        "Tom Hardy",
+        "Charlize Theron",
+        "Nicholas Hoult",
+        "Hugh Keays-Byrne"
+      ],
+      "similarTo": [
+        "the-dark-knight",
+        "dune",
+        "sicario"
+      ]
+    },
+    {
+      "id": "sicario",
+      "title": "Sicario",
+      "year": 2015,
+      "rating": 7.6,
+      "runtime": 121,
+      "poster": "/posters/sicario.svg",
+      "backdrop": "/backdrops/sicario.svg",
+      "tagline": "The border is just another line to cross.",
+      "description": "An FBI agent volunteers for a task force whose objective nobody will state out loud. The further across the border it takes her, the clearer it becomes that she was brought along as paperwork.",
+      "genres": [
+        "Thriller",
+        "Action",
+        "Drama"
+      ],
+      "director": "Denis Villeneuve",
+      "actors": [
+        "Emily Blunt",
+        "Benicio del Toro",
+        "Josh Brolin",
+        "Daniel Kaluuya"
+      ],
+      "similarTo": [
+        "prisoners",
+        "heat",
+        "the-dark-knight",
+        "zodiac"
+      ]
+    },
+    {
+      "id": "heat",
+      "title": "Heat",
+      "year": 1995,
+      "rating": 8.3,
+      "runtime": 170,
+      "poster": "/posters/heat.svg",
+      "backdrop": "/backdrops/heat.svg",
+      "tagline": "A Los Angeles crime saga.",
+      "description": "A crew that takes scores clean and a detective who never goes home circle each other across Los Angeles. They meet once, over coffee, and agree on how it has to end.",
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "director": "Michael Mann",
+      "actors": [
+        "Al Pacino",
+        "Robert De Niro",
+        "Val Kilmer",
+        "Ashley Judd"
+      ],
+      "similarTo": [
+        "the-dark-knight",
+        "sicario",
+        "se7en"
+      ]
+    },
+    {
+      "id": "whiplash",
+      "title": "Whiplash",
+      "year": 2014,
+      "rating": 8.5,
+      "runtime": 106,
+      "poster": "/posters/whiplash.svg",
+      "backdrop": "/backdrops/whiplash.svg",
+      "tagline": "The road to greatness can take you to the edge.",
+      "description": "A drummer at a cutthroat conservatory is taken up by a conductor who believes cruelty is the only reliable teacher. Both of them want the same thing badly enough to ruin each other for it.",
+      "genres": [
+        "Drama",
+        "Thriller"
+      ],
+      "director": "Damien Chazelle",
+      "actors": [
+        "Miles Teller",
+        "J.K. Simmons",
+        "Paul Reiser",
+        "Melissa Benoist"
+      ],
+      "similarTo": [
+        "la-la-land",
+        "the-social-network",
+        "manchester-by-the-sea"
+      ]
+    },
+    {
+      "id": "the-social-network",
+      "title": "The Social Network",
+      "year": 2010,
+      "rating": 7.8,
+      "runtime": 120,
+      "poster": "/posters/the-social-network.svg",
+      "backdrop": "/backdrops/the-social-network.svg",
+      "tagline": "You don't get to 500 million friends without making a few enemies.",
+      "description": "A Harvard sophomore builds a directory of everyone he knows and, within two years, is being deposed by the only people who liked him. The story is told by everybody suing everybody else.",
+      "genres": [
+        "Drama"
+      ],
+      "director": "David Fincher",
+      "actors": [
+        "Jesse Eisenberg",
+        "Andrew Garfield",
+        "Justin Timberlake",
+        "Armie Hammer"
+      ],
+      "similarTo": [
+        "whiplash",
+        "zodiac",
+        "gone-girl",
+        "manchester-by-the-sea"
+      ]
+    },
+    {
+      "id": "parasite",
+      "title": "Parasite",
+      "year": 2019,
+      "rating": 8.5,
+      "runtime": 132,
+      "poster": "/posters/parasite.svg",
+      "backdrop": "/backdrops/parasite.svg",
+      "tagline": "Act like you own the place.",
+      "description": "One family talks its way into every job in a wealthy household, one hire at a time. The arrangement holds beautifully until they find out what the last staff left in the basement.",
+      "genres": [
+        "Thriller",
+        "Drama",
+        "Comedy"
+      ],
+      "director": "Bong Joon-ho",
+      "actors": [
+        "Song Kang-ho",
+        "Lee Sun-kyun",
+        "Cho Yeo-jeong",
+        "Choi Woo-shik"
+      ],
+      "similarTo": [
+        "knives-out",
+        "gone-girl",
+        "se7en"
+      ]
+    },
+    {
+      "id": "the-grand-budapest-hotel",
+      "title": "The Grand Budapest Hotel",
+      "year": 2014,
+      "rating": 8.1,
+      "runtime": 99,
+      "poster": "/posters/the-grand-budapest-hotel.svg",
+      "backdrop": "/backdrops/the-grand-budapest-hotel.svg",
+      "tagline": "A perfect holiday, ruined.",
+      "description": "A legendary concierge and his lobby boy inherit a painting, a murder charge and the attention of a very large family. The hotel keeps running while Europe comes apart outside it.",
+      "genres": [
+        "Comedy",
+        "Drama",
+        "Mystery"
+      ],
+      "director": "Wes Anderson",
+      "actors": [
+        "Ralph Fiennes",
+        "Tony Revolori",
+        "Saoirse Ronan",
+        "Adrien Brody"
+      ],
+      "similarTo": [
+        "knives-out",
+        "jojo-rabbit",
+        "la-la-land"
+      ]
+    },
+    {
+      "id": "knives-out",
+      "title": "Knives Out",
+      "year": 2019,
+      "rating": 7.9,
+      "runtime": 130,
+      "poster": "/posters/knives-out.svg",
+      "backdrop": "/backdrops/knives-out.svg",
+      "tagline": "Everyone has a motive. No one has a clue.",
+      "description": "A novelist dies the night after his birthday and a detective nobody hired turns up to ask the family about it. The nurse who can't lie is the only one telling the truth.",
+      "genres": [
+        "Mystery",
+        "Comedy",
+        "Drama"
+      ],
+      "director": "Rian Johnson",
+      "actors": [
+        "Daniel Craig",
+        "Ana de Armas",
+        "Chris Evans",
+        "Jamie Lee Curtis"
+      ],
+      "similarTo": [
+        "the-grand-budapest-hotel",
+        "parasite",
+        "gone-girl"
+      ]
+    },
+    {
+      "id": "jojo-rabbit",
+      "title": "Jojo Rabbit",
+      "year": 2019,
+      "rating": 7.9,
+      "runtime": 108,
+      "poster": "/posters/jojo-rabbit.svg",
+      "backdrop": "/backdrops/jojo-rabbit.svg",
+      "tagline": "An anti-hate satire.",
+      "description": "A boy in the Hitler Youth keeps an imaginary friend who gives terrible advice, then finds a girl hidden in his own house. Everything he has been taught has to be unlearned in a fortnight.",
+      "genres": [
+        "Comedy",
+        "Drama"
+      ],
+      "director": "Taika Waititi",
+      "actors": [
+        "Roman Griffin Davis",
+        "Thomasin McKenzie",
+        "Scarlett Johansson",
+        "Sam Rockwell"
+      ],
+      "similarTo": [
+        "the-grand-budapest-hotel",
+        "manchester-by-the-sea",
+        "la-la-land"
+      ]
+    },
+    {
+      "id": "la-la-land",
+      "title": "La La Land",
+      "year": 2016,
+      "rating": 8,
+      "runtime": 128,
+      "poster": "/posters/la-la-land.svg",
+      "backdrop": "/backdrops/la-la-land.svg",
+      "tagline": "Here's to the ones who dream.",
+      "description": "An actress between auditions and a pianist holding out for his own club fall in love in a city that rewards neither. Every choice that helps a career costs them the other one.",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Comedy"
+      ],
+      "director": "Damien Chazelle",
+      "actors": [
+        "Ryan Gosling",
+        "Emma Stone",
+        "John Legend",
+        "Rosemarie DeWitt"
+      ],
+      "similarTo": [
+        "whiplash",
+        "her",
+        "eternal-sunshine",
+        "before-sunrise"
+      ]
+    },
+    {
+      "id": "her",
+      "title": "Her",
+      "year": 2013,
+      "rating": 8,
+      "runtime": 126,
+      "poster": "/posters/her.svg",
+      "backdrop": "/backdrops/her.svg",
+      "tagline": "A new operating system. An intuitive entity.",
+      "description": "A man who writes other people's love letters for a living falls for the voice of his operating system. She is growing far faster than the relationship can hold.",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "director": "Spike Jonze",
+      "actors": [
+        "Joaquin Phoenix",
+        "Scarlett Johansson",
+        "Amy Adams",
+        "Rooney Mara"
+      ],
+      "similarTo": [
+        "eternal-sunshine",
+        "ex-machina",
+        "la-la-land",
+        "arrival"
+      ]
+    },
+    {
+      "id": "eternal-sunshine",
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "year": 2004,
+      "rating": 8.3,
+      "runtime": 108,
+      "poster": "/posters/eternal-sunshine.svg",
+      "backdrop": "/backdrops/eternal-sunshine.svg",
+      "tagline": "You can erase someone from your mind. Getting them out of your heart is another story.",
+      "description": "After a bad break-up a man pays a clinic to delete his girlfriend from his memory, then changes his mind halfway through the procedure. He spends the rest of the night hiding her in memories she doesn't belong in.",
+      "genres": [
+        "Romance",
+        "Drama",
+        "Sci-Fi"
+      ],
+      "director": "Michel Gondry",
+      "actors": [
+        "Jim Carrey",
+        "Kate Winslet",
+        "Kirsten Dunst",
+        "Mark Ruffalo"
+      ],
+      "similarTo": [
+        "her",
+        "before-sunrise",
+        "la-la-land",
+        "memento"
+      ]
+    },
+    {
+      "id": "before-sunrise",
+      "title": "Before Sunrise",
+      "year": 1995,
+      "rating": 8.1,
+      "runtime": 101,
+      "poster": "/posters/before-sunrise.svg",
+      "backdrop": "/backdrops/before-sunrise.svg",
+      "tagline": "Can the greatest romance of your life last only one night?",
+      "description": "Two strangers get off a train in Vienna and give themselves until morning. Nothing happens except conversation, which turns out to be the whole thing.",
+      "genres": [
+        "Romance",
+        "Drama"
+      ],
+      "director": "Richard Linklater",
+      "actors": [
+        "Ethan Hawke",
+        "Julie Delpy"
+      ],
+      "similarTo": [
+        "eternal-sunshine",
+        "la-la-land",
+        "her",
+        "manchester-by-the-sea"
+      ]
+    },
+    {
+      "id": "manchester-by-the-sea",
+      "title": "Manchester by the Sea",
+      "year": 2016,
+      "rating": 7.8,
+      "runtime": 137,
+      "poster": "/posters/manchester-by-the-sea.svg",
+      "backdrop": "/backdrops/manchester-by-the-sea.svg",
+      "tagline": "Sometimes you can't go home again.",
+      "description": "A janitor is named guardian of his teenage nephew and has to move back to the town he left. The reason he left is the only thing anybody there still thinks about.",
+      "genres": [
+        "Drama"
+      ],
+      "director": "Kenneth Lonergan",
+      "actors": [
+        "Casey Affleck",
+        "Michelle Williams",
+        "Lucas Hedges",
+        "Kyle Chandler"
+      ],
+      "similarTo": [
+        "whiplash",
+        "the-social-network",
+        "before-sunrise"
+      ]
+    }
+  ],
+  "genres": [
+    {
+      "id": "sci-fi",
+      "name": "Sci-Fi",
+      "slug": "sci-fi"
+    },
+    {
+      "id": "action",
+      "name": "Action",
+      "slug": "action"
+    },
+    {
+      "id": "thriller",
+      "name": "Thriller",
+      "slug": "thriller"
+    },
+    {
+      "id": "drama",
+      "name": "Drama",
+      "slug": "drama"
+    },
+    {
+      "id": "comedy",
+      "name": "Comedy",
+      "slug": "comedy"
+    },
+    {
+      "id": "romance",
+      "name": "Romance",
+      "slug": "romance"
+    },
+    {
+      "id": "mystery",
+      "name": "Mystery",
+      "slug": "mystery"
+    }
+  ],
+  "user": {
+    "id": "u_1",
+    "name": "Alex Rivera",
+    "handle": "@alexrivera",
+    "watched": [
+      "interstellar",
+      "the-dark-knight",
+      "se7en",
+      "whiplash",
+      "gravity",
+      "memento"
+    ],
+    "watchlist": [
+      "dune",
+      "parasite",
+      "la-la-land",
+      "knives-out"
+    ],
+    "favoriteGenres": [
+      "Sci-Fi",
+      "Thriller",
+      "Drama"
+    ]
+  },
+  "forYou": [
+    {
+      "movieId": "inception",
+      "score": 0.97,
+      "reason": "Shares a director with Interstellar",
+      "seedMovieId": "interstellar"
+    },
+    {
+      "movieId": "the-prestige",
+      "score": 0.94,
+      "reason": "Because you finished Memento",
+      "seedMovieId": "memento"
+    },
+    {
+      "movieId": "arrival",
+      "score": 0.92,
+      "reason": "Sci-Fi you haven't seen yet"
+    },
+    {
+      "movieId": "the-martian",
+      "score": 0.9,
+      "reason": "Viewers who watched Gravity watched this",
+      "seedMovieId": "gravity"
+    },
+    {
+      "movieId": "blade-runner-2049",
+      "score": 0.89,
+      "reason": "Top pick in Sci-Fi"
+    },
+    {
+      "movieId": "prisoners",
+      "score": 0.86,
+      "reason": "Thrillers like Se7en",
+      "seedMovieId": "se7en"
+    },
+    {
+      "movieId": "ex-machina",
+      "score": 0.84,
+      "reason": "Sci-Fi you haven't seen yet"
+    },
+    {
+      "movieId": "the-social-network",
+      "score": 0.81,
+      "reason": "Drama from the director of Se7en",
+      "seedMovieId": "se7en"
+    },
+    {
+      "movieId": "sicario",
+      "score": 0.79,
+      "reason": "Thrillers you haven't seen yet"
+    },
+    {
+      "movieId": "annihilation",
+      "score": 0.76,
+      "reason": "Because you liked Sci-Fi mysteries"
+    }
+  ],
+  "trending": [
+    {
+      "movieId": "dune",
+      "score": 0.99,
+      "reason": "#1 this week"
+    },
+    {
+      "movieId": "parasite",
+      "score": 0.96,
+      "reason": "Climbing fast"
+    },
+    {
+      "movieId": "knives-out",
+      "score": 0.93,
+      "reason": "Popular in Mystery"
+    },
+    {
+      "movieId": "mad-max-fury-road",
+      "score": 0.91,
+      "reason": "Popular in Action"
+    },
+    {
+      "movieId": "la-la-land",
+      "score": 0.88,
+      "reason": "Popular in Romance"
+    },
+    {
+      "movieId": "the-grand-budapest-hotel",
+      "score": 0.85,
+      "reason": "Popular in Comedy"
+    },
+    {
+      "movieId": "heat",
+      "score": 0.83,
+      "reason": "Back in rotation"
+    },
+    {
+      "movieId": "gone-girl",
+      "score": 0.8,
+      "reason": "Climbing fast"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="500" height="750" role="img" aria-label="Parasite poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#413e38"/>
+      <stop offset="52%" stop-color="#1e1d1c"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#a39a89" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a39a89" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#bfb8ac" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#5c574f" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1cdc4" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#a39a89" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-parasite" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="500" height="750" fill="url(#bg)"/>
+  <ellipse cx="250" cy="270" rx="360" ry="315" fill="url(#glow)"/>
+  <g>
+    <rect x="73" y="126" width="354" height="354" fill="#4c4842" fill-opacity="0.75" stroke="#ccc7be" stroke-opacity="0.22" stroke-width="1"/>
+    <rect x="108" y="165" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="170" y="165" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="232" y="165" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="294" y="165" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="356" y="165" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="108" y="239" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="170" y="239" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="232" y="239" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="294" y="239" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="356" y="239" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="108" y="313" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="170" y="313" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="232" y="313" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="294" y="313" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="356" y="313" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="108" y="387" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="170" y="387" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="232" y="387" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="294" y="387" width="36" height="44" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="356" y="387" width="36" height="44" fill="#ccc7be" fill-opacity="0.1"/>
+  </g>
+  <rect width="500" height="750" fill="url(#vig)"/>
+  <rect y="345" width="500" height="405" fill="url(#scrim)"/>
+  <rect width="500" height="750" filter="url(#grain-parasite)" opacity="0.055"/>
+  <g font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <rect x="52" y="618" width="34" height="2" fill="#d6d2ca" fill-opacity="0.85"/>
+    <text x="52" y="658" font-size="52" font-weight="700" letter-spacing="-1" fill="#f5f5f7">PARASITE</text>
+    <text x="52" y="702" font-size="17" font-weight="500" letter-spacing="4" fill="#f5f5f7" fill-opacity="0.62">2019</text>
+  </g>
+</svg>

@@ -1,0 +1,177 @@
+{% load static movie_extras %}<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}MovieGraph — Movies connected to what you love{% endblock %}</title>
+  <meta name="description" content="{% block description %}Discover films through the connections between them: directors, cast, genre and the people who watched them next.{% endblock %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='7' cy='8.5' r='3' fill='%23a78bfa'/><circle cx='17.4' cy='6.2' r='2.2' fill='%2322d3ee'/><circle cx='12.6' cy='17.4' r='2.6' fill='%23a78bfa'/></svg>">
+</head>
+<body{% if not show_hero %} class="has-solid-header"{% endif %}>
+  {% include "partials/icons.html" %}
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="page-gutter shell header-bar">
+      <a href="{% url 'catalog:home' %}" class="brand" aria-label="MovieGraph home">
+        <span class="brand-mark"><svg class="icon icon-md"><use href="#i-graph"></use></svg></span>
+        <span class="brand-name">Movie<span class="text-brand-gradient">Graph</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="{% url 'catalog:home' %}" class="nav-link" {% if nav_section == 'home' %}aria-current="page"{% endif %}>Home</a>
+        <a href="{% url 'catalog:discover' %}" class="nav-link" {% if nav_section == 'discover' %}aria-current="page"{% endif %}>Discover</a>
+        <a href="{% url 'library:my_movies' %}" class="nav-link" {% if nav_section == 'my-movies' %}aria-current="page"{% endif %}>My Movies</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="search-trigger" data-search-open aria-label="Search movies">
+          <svg class="icon"><use href="#i-search"></use></svg>
+          <span class="label">Search</span>
+          <kbd>/</kbd>
+        </button>
+
+        {% if not user.is_authenticated %}
+          <a href="{% url 'library:login' %}" class="btn btn-sm" style="background:var(--brand);color:var(--ink-950);font-weight:600">Sign In</a>
+        {% endif %}
+
+        <div class="profile" data-profile>
+          <button type="button" class="avatar" data-profile-toggle aria-expanded="false" aria-haspopup="menu"
+                  aria-label="Account menu">
+            {% if profile %}{{ profile.initials }}{% else %}G{% endif %}
+          </button>
+
+          <div class="profile-menu" role="menu" aria-label="Account" data-profile-menu hidden>
+            <div class="identity">
+              <p class="name">{% if profile %}{{ profile.display_name }}{% else %}Guest{% endif %}</p>
+              <p class="handle">{% if profile %}{{ profile.handle }}{% else %}Not signed in{% endif %}</p>
+            </div>
+
+            <dl class="profile-stats">
+              <div>
+                <dt>Watched</dt>
+                <dd data-count-watched>{{ library.watched_count|default:"0" }}</dd>
+              </div>
+              <div>
+                <dt>Watchlist</dt>
+                <dd data-count-watchlist>{{ library.watchlist_count|default:"0" }}</dd>
+              </div>
+            </dl>
+
+            <a href="{% url 'library:my_movies' %}" role="menuitem">My Movies</a>
+            {% if user.is_authenticated %}
+              {% if user.is_staff %}<a href="{% url 'admin:index' %}" role="menuitem">Admin</a>{% endif %}
+              <form method="post" action="{% url 'library:logout' %}">
+                {% csrf_token %}
+                <button type="submit" role="menuitem">Sign out</button>
+              </form>
+            {% else %}
+              <a href="{% url 'library:login' %}" role="menuitem">Sign in</a>
+              <a href="{% url 'library:signup' %}" role="menuitem">Create account</a>
+            {% endif %}
+          </div>
+        </div>
+
+        <button type="button" class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="mobile-nav"
+                aria-label="Open menu">
+          <svg class="icon icon-md"><use href="#i-menu"></use></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-nav" class="page-gutter mobile-nav" aria-label="Primary" data-mobile-nav hidden>
+      <a href="{% url 'catalog:home' %}" {% if nav_section == 'home' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{% url 'catalog:discover' %}" {% if nav_section == 'discover' %}aria-current="page"{% endif %}>Discover</a>
+      <a href="{% url 'library:my_movies' %}" {% if nav_section == 'my-movies' %}aria-current="page"{% endif %}>My Movies</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-gutter shell footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark"><svg class="icon"><use href="#i-graph"></use></svg></span>
+        <span>MovieGraph</span>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="{% url 'catalog:home' %}">Home</a>
+        <a href="{% url 'catalog:discover' %}">Discover</a>
+        <a href="{% url 'library:my_movies' %}">My Movies</a>
+      </nav>
+
+      <p class="footer-note">Django build — catalog seeded, recommendations computed from the graph.</p>
+    </div>
+  </footer>
+
+  {% comment %}
+    Command-palette search. The list is fetched from /api/search/ as you type;
+    submitting the form falls through to the full-page results, so the feature
+    still works with JavaScript off.
+  {% endcomment %}
+  <div class="search-dialog" role="dialog" aria-modal="true" aria-label="Search movies" data-search-dialog hidden
+       data-search-url="{% url 'api:search' %}" data-static-url="{% static '' %}">
+    <div class="search-backdrop" data-search-close></div>
+
+    <div class="search-panel">
+      <form class="search-field" method="get" action="{% url 'catalog:search' %}" role="search">
+        <svg class="icon icon-md"><use href="#i-search"></use></svg>
+        <input type="search" name="q" placeholder="Search movies, directors, actors…" autocomplete="off"
+               aria-label="Search movies" data-search-input>
+        <button type="button" class="search-close" data-search-close aria-label="Close search">
+          <svg class="icon"><use href="#i-close"></use></svg>
+        </button>
+      </form>
+
+      <div class="search-results" data-search-results>
+        <p class="search-hint" data-search-hint>Top rated</p>
+        <div data-search-list></div>
+      </div>
+    </div>
+  </div>
+
+  {% if messages %}
+    <div class="messages" data-messages>
+      {% for message in messages %}
+        <p class="message">{{ message }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Chatbot Widget -->
+  <div id="ai-chat-widget" class="ai-chat-closed">
+    <button id="ai-chat-toggle" aria-label="Toggle AI Chat">
+      <svg class="icon"><use href="#i-robot"></use></svg> Ask AI
+    </button>
+    <div id="ai-chat-window" hidden>
+      <div class="ai-chat-header">
+        <h3>MovieGraph AI Assistant</h3>
+        <button id="ai-chat-close" aria-label="Close Chat">
+          <svg class="icon"><use href="#i-close"></use></svg>
+        </button>
+      </div>
+      <div id="ai-chat-messages">
+        <div class="ai-message">Hello! I'm your AI Movie Assistant. Ask me anything about movies, directors, or genres!</div>
+      </div>
+      <form id="ai-chat-form">
+        {% csrf_token %}
+        <input type="text" id="ai-chat-input" placeholder="e.g. Recommend a sci-fi movie..." required autocomplete="off">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{% static 'js/app.js' %}" defer></script>
+  <script src="{% static 'js/chat.js' %}" defer></script>
+</body>
+</html>

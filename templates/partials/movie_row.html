@@ -1,0 +1,54 @@
+{% load movie_extras %}{% comment %}
+One horizontal, snap-scrolling rail.
+
+Takes a `RecommendationSet` as `rail` and renders it verbatim — title, subtitle,
+scores and reasons all come from the set, so a rail produced by a different
+query renders without touching this template.
+
+Context:
+  rail           RecommendationSet
+  view_all_url   optional "View all" link
+  show_reasons   print the per-item explanation under each card
+  show_match     print the ranker confidence as a "% match" badge
+  priority_count how many leading posters to load eagerly
+  empty_message  what to say when the rail has no items
+{% endcomment %}
+{% if rail %}
+<section class="rail" aria-labelledby="rail-{{ rail.id }}">
+  <header class="page-gutter rail-header">
+    <div style="min-width:0">
+      <h2 id="rail-{{ rail.id }}">{{ rail.title }}</h2>
+      {% if rail.subtitle %}<p class="subtitle">{{ rail.subtitle }}</p>{% endif %}
+    </div>
+
+    <div class="rail-actions">
+      {% if view_all_url %}
+        <a href="{{ view_all_url }}" class="link-arrow">
+          View all <svg class="icon"><use href="#i-arrow-right"></use></svg>
+        </a>
+      {% endif %}
+
+      <div class="rail-arrows">
+        <button type="button" class="rail-arrow" data-rail-prev aria-label="Scroll {{ rail.title }} left" disabled>
+          <svg class="icon"><use href="#i-chevron-left"></use></svg>
+        </button>
+        <button type="button" class="rail-arrow" data-rail-next aria-label="Scroll {{ rail.title }} right">
+          <svg class="icon"><use href="#i-chevron-right"></use></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  {% if rail.items %}
+    <div class="page-gutter no-scrollbar rail-track" data-rail-track>
+      {% with eager=priority_count|default:0 %}
+      {% for item in rail.items %}
+        {% include "partials/movie_card.html" with movie=item.movie reason=item.reason show_reasons=show_reasons score=item.score show_match=show_match priority=forloop.counter0|under:eager %}
+      {% endfor %}
+      {% endwith %}
+    </div>
+  {% else %}
+    <p class="page-gutter rail-empty">{{ empty_message|default:"Nothing to show here yet." }}</p>
+  {% endif %}
+</section>
+{% endif %}

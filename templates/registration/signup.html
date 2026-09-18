@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Create account · MovieGraph{% endblock %}
+{% block description %}Create a MovieGraph account to keep your watchlist and personalised recommendations.{% endblock %}
+
+{% block content %}
+  <div class="auth">
+    <div class="auth-glow" aria-hidden="true"><span></span><span></span><span></span></div>
+
+    <div class="auth-card">
+      <div class="auth-head">
+        <a href="{% url 'catalog:home' %}" class="mark" aria-label="MovieGraph home">
+          <svg class="icon icon-lg"><use href="#i-graph"></use></svg>
+        </a>
+        <h1>Create your account</h1>
+        <p>Anything you have already saved comes with you.</p>
+      </div>
+
+      {% if form.errors %}
+        <div class="form-errors" role="alert">
+          <ul>
+            {% for error in form.non_field_errors %}<li>{{ error }}</li>{% endfor %}
+            {% for field in form %}
+              {% for error in field.errors %}<li>{{ field.label }}: {{ error }}</li>{% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      <form method="post" novalidate>
+        {% csrf_token %}
+
+        <div class="field">
+          <label for="{{ form.username.id_for_label }}">Username</label>
+          <input type="text" name="{{ form.username.html_name }}" id="{{ form.username.id_for_label }}"
+                 value="{{ form.username.value|default:'' }}" placeholder="yourname" autocomplete="username" required>
+          <p class="help">Letters, digits and @ . + - _ only.</p>
+        </div>
+
+        <div class="field">
+          <label for="{{ form.password1.id_for_label }}">Password</label>
+          <input type="password" name="{{ form.password1.html_name }}" id="{{ form.password1.id_for_label }}"
+                 placeholder="••••••••" autocomplete="new-password" required>
+          <p class="help">At least 8 characters, not entirely numeric, and not a common password.</p>
+        </div>
+
+        <div class="field">
+          <label for="{{ form.password2.id_for_label }}">Confirm password</label>
+          <input type="password" name="{{ form.password2.html_name }}" id="{{ form.password2.id_for_label }}"
+                 placeholder="••••••••" autocomplete="new-password" required>
+        </div>
+
+        <button type="submit" class="auth-submit">
+          <span>Create account <svg class="icon"><use href="#i-arrow-right"></use></svg></span>
+        </button>
+      </form>
+
+      <div class="auth-foot">
+        Already have an account? <a href="{% url 'library:login' %}">Sign in</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

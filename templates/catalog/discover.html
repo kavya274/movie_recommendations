@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load movie_extras %}
+
+{% block title %}Discover · MovieGraph{% endblock %}
+{% block description %}Browse the full MovieGraph catalog by genre and rating.{% endblock %}
+
+{% block content %}
+  <div class="page page-gutter shell">
+    <header class="page-header">
+      <h1>Discover</h1>
+      <p>The whole catalog. Filter by genre, sort it, and open anything to see what it connects to.</p>
+    </header>
+
+    <div style="margin-top:2rem">
+      <div class="toolbar">
+        {% include "partials/genre_filter.html" %}
+
+        {% comment %}
+          Sorting is a GET form so the choice lands in the URL. The submit
+          button is the no-JavaScript path; app.js submits on change.
+        {% endcomment %}
+        <form method="get" class="sort-control" data-autosubmit>
+          {% if active_genre != "All" %}<input type="hidden" name="genre" value="{{ active_genre }}">{% endif %}
+          <label for="sort">Sort by</label>
+          <select name="sort" id="sort">
+            {% for value, label in sort_options %}
+              <option value="{{ value }}" {% if value == active_sort %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+          <noscript><button type="submit" class="btn btn-secondary btn-sm">Apply</button></noscript>
+        </form>
+      </div>
+
+      <p class="result-count" role="status">
+        {{ result_count }} movie{{ result_count|pluralize }}{% if active_genre != "All" %} in {{ active_genre }}{% endif %}
+      </p>
+
+      <div style="margin-top:1.5rem">
+        {% if movies %}
+          {% include "partials/movie_grid.html" with movies=movies priority_count=6 %}
+        {% else %}
+          {% include "partials/empty_state.html" with title="No "|add:active_genre|add:" movies yet" description="Nothing in the catalog matches this filter right now." action_url=request.path action_label="Clear filters" %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

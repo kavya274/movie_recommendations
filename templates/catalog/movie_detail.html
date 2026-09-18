@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% load static movie_extras %}
+
+{% block title %}{{ movie.title }} ({{ movie.year }}) · MovieGraph{% endblock %}
+{% block description %}{{ movie.description }}{% endblock %}
+
+{% block content %}
+  <article>
+    <div class="detail-hero">
+      <div class="detail-art">
+        <div class="poster">
+          <img src="{% static movie.backdrop|default:movie.poster %}" alt="" loading="eager" decoding="async"
+               onload="this.classList.add('is-loaded')">
+        </div>
+      </div>
+
+      <div class="page-gutter shell" style="padding-top:6rem">
+        <a href="{% url 'catalog:discover' %}" class="back-link">
+          <svg class="icon"><use href="#i-chevron-left"></use></svg>Back to discover
+        </a>
+
+        <div class="detail-head">
+          <div class="detail-poster">
+            <div class="poster">
+              <img src="{% static movie.poster %}" alt="{{ movie.title }} poster" loading="eager" decoding="async"
+                   onload="this.classList.add('is-loaded')">
+            </div>
+          </div>
+
+          <div class="detail-copy">
+            <h1>{{ movie.title }}</h1>
+            {% if movie.tagline %}<p class="tagline">“{{ movie.tagline }}”</p>{% endif %}
+
+            <div class="meta-line">
+              <span class="score">
+                <svg class="icon icon-solid"><use href="#i-star"></use></svg>
+                {{ movie.rating|rating }}<span class="sr-only"> out of 10</span>
+              </span>
+              <span class="sep" aria-hidden="true">•</span>
+              <span class="tabular">{{ movie.year }}</span>
+              <span class="sep" aria-hidden="true">•</span>
+              <span class="runtime">
+                <svg class="icon"><use href="#i-clock"></use></svg>{{ movie.runtime|runtime }}
+              </span>
+            </div>
+
+            <ul class="chip-list" style="margin-top:1rem">
+              {% for genre in movie.genre_names %}
+                <li><a class="chip-link" href="{% discover_url genre %}">{{ genre }}</a></li>
+              {% endfor %}
+            </ul>
+
+            <div class="detail-actions">
+              <form method="post" action="{% url 'library:toggle_watched' movie.slug %}"
+                    data-library-form data-slug="{{ movie.slug }}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                {% if movie.slug in library.watched_slugs %}
+                  <button type="submit" class="btn btn-secondary" aria-pressed="true"
+                          aria-label="Mark {{ movie.title }} as not watched">
+                    <svg class="icon"><use href="#i-check"></use></svg><span>Watched</span>
+                  </button>
+                {% else %}
+                  <button type="submit" class="btn btn-outline" aria-pressed="false"
+                          aria-label="Mark {{ movie.title }} as watched">
+                    <svg class="icon"><use href="#i-eye"></use></svg><span>Mark as watched</span>
+                  </button>
+                {% endif %}
+              </form>
+
+              <form method="post" action="{% url 'library:toggle_watchlist' movie.slug %}"
+                    data-library-form data-slug="{{ movie.slug }}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.get_full_path }}">
+                {% if movie.slug in library.watchlist_slugs %}
+                  <button type="submit" class="btn btn-secondary" aria-pressed="true"
+                          aria-label="Remove {{ movie.title }} from watchlist">
+                    <svg class="icon icon-solid"><use href="#i-bookmark-filled"></use></svg><span>In watchlist</span>
+                  </button>
+                {% else %}
+                  <button type="submit" class="btn btn-outline" aria-pressed="false"
+                          aria-label="Add {{ movie.title }} to watchlist">
+                    <svg class="icon"><use href="#i-bookmark"></use></svg><span>Watchlist</span>
+                  </button>
+                {% endif %}
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-gutter shell">
+      <div class="detail-columns">
+        <section aria-labelledby="synopsis-heading">
+          <h2 id="synopsis-heading" class="section-label">Synopsis</h2>
+          <p class="synopsis">{{ movie.description }}</p>
+        </section>
+
+        <section aria-labelledby="credits-heading">
+          <h2 id="credits-heading" class="section-label">Credits</h2>
+          <dl class="credits">
+            <div>
+              <dt>Director</dt>
+              <dd>{{ movie.director_name|default:"—" }}</dd>
+            </div>
+            <div>
+              <dt>Cast</dt>
+              <dd>
+                <ul class="cast-list" style="margin-top:0.5rem">
+                  {% for actor in movie.actor_names %}<li>{{ actor }}</li>{% empty %}<li>Not credited</li>{% endfor %}
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+    </div>
+
+    <div class="related-rail">
+      {% include "partials/movie_row.html" with rail=related show_reasons=True empty_message="No related movies yet." %}
+    </div>
+  </article>
+{% endblock %}

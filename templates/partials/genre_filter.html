@@ -1,0 +1,15 @@
+{% load movie_extras %}{% comment %}
+Genre chips.
+
+Plain links, not buttons: filtering happens on the server, so every filter state
+is a real URL you can share, bookmark or open in a new tab. `active_genre` and
+`active_sort` come from the view.
+{% endcomment %}
+<div class="genre-filter no-scrollbar" role="group" aria-label="Filter by genre">
+  <a class="chip" href="{% discover_url None active_sort %}"
+     aria-pressed="{% if active_genre == 'All' %}true{% else %}false{% endif %}">All</a>
+  {% for genre in genres %}
+    <a class="chip" href="{% discover_url genre.name active_sort %}"
+       aria-pressed="{% if active_genre == genre.name %}true{% else %}false{% endif %}">{{ genre.name }}</a>
+  {% endfor %}
+</div>

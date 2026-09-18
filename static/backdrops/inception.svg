@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Inception backdrop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#263546"/>
+      <stop offset="52%" stop-color="#131922"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#5b83ad" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#5b83ad" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#8ca8c6" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#344a62" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#adc1d6" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#5b83ad" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-inception-b" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="992" cy="324" rx="736" ry="558" fill="url(#glow)"/>
+  <g>
+    <line x1="621.3" y1="598.5" x2="-1117.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="683.4" y1="598.5" x2="-807.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="745.5" y1="598.5" x2="-496.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="807.6" y1="598.5" x2="-186.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="869.7" y1="598.5" x2="124.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="931.8" y1="598.5" x2="435.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="993.9" y1="598.5" x2="745.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1056.0" y1="598.5" x2="1056.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1118.1" y1="598.5" x2="1366.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1180.2" y1="598.5" x2="1677.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1242.3" y1="598.5" x2="1987.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1304.4" y1="598.5" x2="2298.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1366.5" y1="598.5" x2="2608.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1428.6" y1="598.5" x2="2919.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="1490.7" y1="598.5" x2="3229.5" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.3" stroke-width="1.62"/>
+    <line x1="0.0" y1="601.5" x2="1600.0" y2="601.5" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="611.3" x2="1600.0" y2="611.3" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="628.5" x2="1600.0" y2="628.5" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="653.4" x2="1600.0" y2="653.4" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="686.2" x2="1600.0" y2="686.2" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="727.2" x2="1600.0" y2="727.2" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="776.4" x2="1600.0" y2="776.4" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="833.9" x2="1600.0" y2="833.9" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <line x1="0.0" y1="900.0" x2="1600.0" y2="900.0" stroke="#a5bbd2" stroke-opacity="0.26" stroke-width="1.62"/>
+    <rect x="894" y="166.49999999999997" width="324" height="324" fill="none" stroke="#a5bbd2" stroke-opacity="0.5" stroke-width="2.43" transform="rotate(45 1056 328.5)"/>
+    <rect x="950.7" y="223.2" width="210.60000000000002" height="210.60000000000002" fill="#a5bbd2" fill-opacity="0.08" transform="rotate(45 1056 328.5)"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#vig)"/>
+  <rect y="360" width="1600" height="540" fill="url(#scrim)"/>
+  <rect width="1152" height="900" fill="url(#sideScrim)"/>
+  <rect width="1600" height="900" filter="url(#grain-inception-b)" opacity="0.05"/>
+</svg>

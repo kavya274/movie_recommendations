@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}{% if query %}{{ query }} · Search{% else %}Search{% endif %} · MovieGraph{% endblock %}
+
+{% block content %}
+  {% url 'catalog:discover' as discover_link %}
+  <div class="page page-gutter shell">
+    <header class="page-header">
+      <h1>Search</h1>
+      <p>Matches on title, director, cast, genre and year.</p>
+    </header>
+
+    <form method="get" role="search" style="margin-top:2rem;max-width:32rem">
+      <div class="field" style="margin:0">
+        <label for="q">Search movies</label>
+        <input type="search" name="q" id="q" value="{{ query }}" placeholder="Search movies, directors, actors..."
+               autocomplete="off" autofocus>
+      </div>
+    </form>
+
+    {% if query %}
+      <p class="result-count" role="status">
+        {{ result_count }} result{{ result_count|pluralize }} for "{{ query }}"
+      </p>
+    {% endif %}
+
+    <div style="margin-top:1.5rem">
+      {% if movies %}
+        {% include "partials/movie_grid.html" with movies=movies priority_count=6 %}
+      {% elif query %}
+        {% include "partials/empty_state.html" with icon="search" title="Nothing matched" description="No movie in the catalog matches that search. Try a director, an actor or a genre." action_url=discover_link action_label="Browse the catalog" %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

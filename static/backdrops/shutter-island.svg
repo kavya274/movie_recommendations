@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Shutter Island backdrop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#1f2e37"/>
+      <stop offset="52%" stop-color="#10161b"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#4a7186" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#4a7186" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#809caa" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#2b404d" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a5b8c3" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#4a7186" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-shutter-island-b" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="992" cy="324" rx="736" ry="558" fill="url(#glow)"/>
+  <g>
+    <circle cx="1056" cy="396" r="140.4" fill="#9bb1bc" fill-opacity="0.2"/>
+    <rect x="-10" y="139.5" width="1620" height="14.850000000000001" fill="#9bb1bc" fill-opacity="0.080"/>
+    <rect x="-10" y="201.6" width="1620" height="22.950000000000003" fill="#9bb1bc" fill-opacity="0.130"/>
+    <rect x="-10" y="263.7" width="1620" height="31.05" fill="#9bb1bc" fill-opacity="0.180"/>
+    <rect x="-10" y="325.8" width="1620" height="14.850000000000001" fill="#9bb1bc" fill-opacity="0.230"/>
+    <rect x="-10" y="387.9" width="1620" height="22.950000000000003" fill="#9bb1bc" fill-opacity="0.080"/>
+    <rect x="-10" y="450.0" width="1620" height="31.05" fill="#9bb1bc" fill-opacity="0.130"/>
+    <rect x="-10" y="512.1" width="1620" height="14.850000000000001" fill="#9bb1bc" fill-opacity="0.180"/>
+    <rect x="-10" y="574.2" width="1620" height="22.950000000000003" fill="#9bb1bc" fill-opacity="0.230"/>
+    <rect x="-10" y="636.3" width="1620" height="31.05" fill="#9bb1bc" fill-opacity="0.080"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#vig)"/>
+  <rect y="360" width="1600" height="540" fill="url(#scrim)"/>
+  <rect width="1152" height="900" fill="url(#sideScrim)"/>
+  <rect width="1600" height="900" filter="url(#grain-shutter-island-b)" opacity="0.05"/>
+</svg>

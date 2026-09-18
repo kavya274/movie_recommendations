@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}My Movies · MovieGraph{% endblock %}
+{% block description %}Everything you have watched and everything you have saved for later.{% endblock %}
+
+{% block content %}
+  {% url 'catalog:discover' as discover_link %}
+  <div class="page page-gutter shell">
+    <header class="page-header" style="margin-bottom:2rem">
+      <p class="eyebrow">
+        {% if profile %}{{ profile.display_name }}{% else %}Browsing as a guest{% endif %}
+      </p>
+      <h1 style="margin-top:0.5rem">My Movies</h1>
+      <p>Your watch history and watchlist. Both feed the recommendations on the home page.</p>
+
+      {% if not user.is_authenticated %}
+        <p style="margin-top:0.75rem;font-size:0.8125rem;color:var(--faint)">
+          Saved in this browser only —
+          <a href="{% url 'library:signup' %}" style="color:var(--brand)">create an account</a>
+          to keep it, and we will carry this list over.
+        </p>
+      {% endif %}
+    </header>
+
+    {% comment %}
+      Tabs are links, not buttons: each list is its own URL (?tab=), so the two
+      views are shareable and the back button does what you expect.
+    {% endcomment %}
+    <div class="tabs" role="tablist" aria-label="My movies">
+      <a class="tab" role="tab" href="?tab=watched"
+         aria-selected="{% if active_tab == 'watched' %}true{% else %}false{% endif %}">
+        Watched <span class="count">{{ watched_count }}</span>
+      </a>
+      <a class="tab" role="tab" href="?tab=watchlist"
+         aria-selected="{% if active_tab == 'watchlist' %}true{% else %}false{% endif %}">
+        Watchlist <span class="count">{{ watchlist_count }}</span>
+      </a>
+    </div>
+
+    {% if favourite_genres and active_tab == "watched" %}
+      <p style="margin-top:1.25rem;font-size:0.875rem;color:var(--faint)">
+        Your top genres: {{ favourite_genres|join:", " }}
+      </p>
+    {% endif %}
+
+    <div style="margin-top:2rem">
+      {% if movies %}
+        {% include "partials/movie_grid.html" with movies=movies priority_count=6 %}
+      {% elif active_tab == "watched" %}
+        {% include "partials/empty_state.html" with icon="eye" title="Nothing watched yet" description="Open any movie and mark it as watched — recommendations start using it right away." action_url=discover_link action_label="Find something to watch" %}
+      {% else %}
+        {% include "partials/empty_state.html" with icon="bookmark" title="Your watchlist is empty" description="Hover any poster and hit the + to save it for later." action_url=discover_link action_label="Browse the catalog" %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

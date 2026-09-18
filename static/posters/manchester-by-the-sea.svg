@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="500" height="750" role="img" aria-label="Manchester by the Sea poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#2c3842"/>
+      <stop offset="52%" stop-color="#151a20"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#6b8aa3" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#6b8aa3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#97adbf" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#3d4e5d" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b5c5d1" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#6b8aa3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-manchester-by-the-sea" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="500" height="750" fill="url(#bg)"/>
+  <ellipse cx="250" cy="270" rx="360" ry="315" fill="url(#glow)"/>
+  <g>
+    <path d="M -20 406 C 130 274 310 422.5 520 316.9 L 520 770 L -20 770 Z" fill="#33414d" fill-opacity="0.92"/>
+    <path d="M -20 406 C 130 274 310 422.5 520 316.9 L 520 770 L -20 770 Z" fill="none" stroke="#aebfcc" stroke-opacity="0.2" stroke-width="0.9"/>
+    <path d="M -20 450 C 130 334 310 464.5 520 371.7 L 520 770 L -20 770 Z" fill="#2b3741" fill-opacity="0.87"/>
+    <path d="M -20 450 C 130 334 310 464.5 520 371.7 L 520 770 L -20 770 Z" fill="none" stroke="#aebfcc" stroke-opacity="0.17" stroke-width="0.9"/>
+    <path d="M -20 494 C 130 394 310 506.5 520 426.5 L 520 770 L -20 770 Z" fill="#232d35" fill-opacity="0.8200000000000001"/>
+    <path d="M -20 494 C 130 394 310 506.5 520 426.5 L 520 770 L -20 770 Z" fill="none" stroke="#aebfcc" stroke-opacity="0.14" stroke-width="0.9"/>
+    <path d="M -20 538 C 130 454 310 548.5 520 481.3 L 520 770 L -20 770 Z" fill="#1c2229" fill-opacity="0.77"/>
+    <path d="M -20 538 C 130 454 310 548.5 520 481.3 L 520 770 L -20 770 Z" fill="none" stroke="#aebfcc" stroke-opacity="0.11000000000000001" stroke-width="0.9"/>
+    <path d="M -20 582 C 130 514 310 590.5 520 536.1 L 520 770 L -20 770 Z" fill="#14181d" fill-opacity="0.72"/>
+    <path d="M -20 582 C 130 514 310 590.5 520 536.1 L 520 770 L -20 770 Z" fill="none" stroke="#aebfcc" stroke-opacity="0.08000000000000002" stroke-width="0.9"/>
+    <circle cx="250" cy="208" r="58" fill="#aebfcc" fill-opacity="0.2"/>
+  </g>
+  <rect width="500" height="750" fill="url(#vig)"/>
+  <rect y="345" width="500" height="405" fill="url(#scrim)"/>
+  <rect width="500" height="750" filter="url(#grain-manchester-by-the-sea)" opacity="0.055"/>
+  <g font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <rect x="52" y="567" width="34" height="2" fill="#bccad6" fill-opacity="0.85"/>
+    <text x="52" y="607" font-size="45" font-weight="700" letter-spacing="-0.5" fill="#f5f5f7">MANCHESTER BY</text>
+    <text x="52" y="658" font-size="45" font-weight="700" letter-spacing="-0.5" fill="#f5f5f7">THE SEA</text>
+    <text x="52" y="702" font-size="17" font-weight="500" letter-spacing="4" fill="#f5f5f7" fill-opacity="0.62">2016</text>
+  </g>
+</svg>

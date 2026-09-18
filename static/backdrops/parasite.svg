@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Parasite backdrop">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#413e38"/>
+      <stop offset="52%" stop-color="#1e1d1c"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#a39a89" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a39a89" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#bfb8ac" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#5c574f" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1cdc4" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#a39a89" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-parasite-b" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <ellipse cx="992" cy="324" rx="736" ry="558" fill="url(#glow)"/>
+  <g>
+    <rect x="817.05" y="161.1" width="477.9" height="477.90000000000003" fill="#4c4842" fill-opacity="0.75" stroke="#ccc7be" stroke-opacity="0.22" stroke-width="1.35"/>
+    <rect x="864.3" y="213.75" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="948" y="213.75" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1031.7" y="213.75" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1115.3999999999999" y="213.75" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="1199.1" y="213.75" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="864.3" y="313.65000000000003" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="948" y="313.65000000000003" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="1031.7" y="313.65000000000003" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1115.3999999999999" y="313.65000000000003" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1199.1" y="313.65000000000003" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="864.3" y="413.55" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="948" y="413.55" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1031.7" y="413.55" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="1115.3999999999999" y="413.55" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1199.1" y="413.55" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="864.3" y="513.45" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="948" y="513.45" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1031.7" y="513.45" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+    <rect x="1115.3999999999999" y="513.45" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.4"/>
+    <rect x="1199.1" y="513.45" width="48.6" height="59.400000000000006" fill="#ccc7be" fill-opacity="0.1"/>
+  </g>
+  <rect width="1600" height="900" fill="url(#vig)"/>
+  <rect y="360" width="1600" height="540" fill="url(#scrim)"/>
+  <rect width="1152" height="900" fill="url(#sideScrim)"/>
+  <rect width="1600" height="900" filter="url(#grain-parasite-b)" opacity="0.05"/>
+</svg>

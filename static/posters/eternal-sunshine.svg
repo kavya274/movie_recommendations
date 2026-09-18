@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 750" width="500" height="750" role="img" aria-label="Eternal Sunshine of the Spotless Mind poster">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#33414f"/>
+      <stop offset="52%" stop-color="#191e25"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" stop-color="#7fa3c4" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#7fa3c4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbFill" cx="0.36" cy="0.3">
+      <stop offset="0%" stop-color="#a5bfd6" stop-opacity="0.95"/>
+      <stop offset="62%" stop-color="#485c6f" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.98"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfd1e2" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#7fa3c4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="58%" stop-color="#050507" stop-opacity="0.72"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.97"/>
+    </linearGradient>
+    <linearGradient id="sideScrim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#050507" stop-opacity="0.88"/>
+      <stop offset="60%" stop-color="#050507" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="55%" stop-color="#050507" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#050507" stop-opacity="0.72"/>
+    </radialGradient>
+    <filter id="grain-eternal-sunshine" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="500" height="750" fill="url(#bg)"/>
+  <ellipse cx="250" cy="270" rx="360" ry="315" fill="url(#glow)"/>
+  <g>
+    <circle cx="250" cy="300" r="104" fill="#b9ccdf" fill-opacity="0.2"/>
+    <rect x="-10" y="110.0" width="520" height="11" fill="#b9ccdf" fill-opacity="0.080"/>
+    <rect x="-10" y="156.0" width="520" height="17" fill="#b9ccdf" fill-opacity="0.130"/>
+    <rect x="-10" y="202.0" width="520" height="23" fill="#b9ccdf" fill-opacity="0.180"/>
+    <rect x="-10" y="248.0" width="520" height="11" fill="#b9ccdf" fill-opacity="0.230"/>
+    <rect x="-10" y="294.0" width="520" height="17" fill="#b9ccdf" fill-opacity="0.080"/>
+    <rect x="-10" y="340.0" width="520" height="23" fill="#b9ccdf" fill-opacity="0.130"/>
+    <rect x="-10" y="386.0" width="520" height="11" fill="#b9ccdf" fill-opacity="0.180"/>
+    <rect x="-10" y="432.0" width="520" height="17" fill="#b9ccdf" fill-opacity="0.230"/>
+    <rect x="-10" y="478.0" width="520" height="23" fill="#b9ccdf" fill-opacity="0.080"/>
+  </g>
+  <rect width="500" height="750" fill="url(#vig)"/>
+  <rect y="345" width="500" height="405" fill="url(#scrim)"/>
+  <rect width="500" height="750" filter="url(#grain-eternal-sunshine)" opacity="0.055"/>
+  <g font-family="Inter, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <rect x="52" y="486" width="34" height="2" fill="#c5d6e4" fill-opacity="0.85"/>
+    <text x="52" y="526" font-size="38" font-weight="700" letter-spacing="-0.5" fill="#f5f5f7">ETERNAL</text>
+    <text x="52" y="570" font-size="38" font-weight="700" letter-spacing="-0.5" fill="#f5f5f7">SUNSHINE OF</text>
+    <text x="52" y="614" font-size="38" font-weight="700" letter-spacing="-0.5" fill="#f5f5f7">THE SPOTLESS</text>
+    <text x="52" y="658" font-size="38" font-weight="700" letter-spacing="-0.5" fill="#f5f5f7">MIND</text>
+    <text x="52" y="702" font-size="17" font-weight="500" letter-spacing="4" fill="#f5f5f7" fill-opacity="0.62">2004</text>
+  </g>
+</svg>

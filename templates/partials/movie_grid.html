@@ -1,0 +1,12 @@
+{% load movie_extras %}{% comment %}
+Responsive grid of cards — 2 up on phones through 6 up on wide screens.
+
+Context: `movies`, optional `priority_count`.
+{% endcomment %}
+<div class="movie-grid">
+  {% with eager=priority_count|default:0 %}
+  {% for movie in movies %}
+    {% include "partials/movie_card.html" with movie=movie priority=forloop.counter0|under:eager %}
+  {% endfor %}
+  {% endwith %}
+</div>

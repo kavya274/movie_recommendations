@@ -1,0 +1,87 @@
+{% comment %}
+Icon sprite, included once per page and referenced as:
+
+    <svg class="icon"><use href="#i-star"></use></svg>
+
+Hand-rolled, no icon dependency. Stroke icons inherit `currentColor` from the
+`.icon` class; the solid ones declare their own fill and pair with `.icon-solid`.
+Every glyph is decorative — the surrounding control carries the label.
+{% endcomment %}
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-star" viewBox="0 0 24 24">
+    <path d="M12 2.6l2.74 5.98 6.51.73-4.84 4.4 1.32 6.42L12 16.9l-5.73 3.23 1.32-6.42-4.84-4.4 6.51-.73L12 2.6z" />
+  </symbol>
+
+  <symbol id="i-plus" viewBox="0 0 24 24">
+    <path d="M12 5v14M5 12h14" />
+  </symbol>
+
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path d="M20 6L9 17l-5-5" />
+  </symbol>
+
+  <symbol id="i-bookmark" viewBox="0 0 24 24">
+    <path d="M6 4.5h12a1 1 0 011 1V20l-7-4-7 4V5.5a1 1 0 011-1z" />
+  </symbol>
+
+  <symbol id="i-bookmark-filled" viewBox="0 0 24 24">
+    <path d="M6 3.5h12a1.5 1.5 0 011.5 1.5v15.2a.8.8 0 01-1.2.7L12 17.2l-6.3 3.7a.8.8 0 01-1.2-.7V5A1.5 1.5 0 016 3.5z" />
+  </symbol>
+
+  <symbol id="i-eye" viewBox="0 0 24 24">
+    <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" />
+    <circle cx="12" cy="12" r="3.2" />
+  </symbol>
+
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="6.5" />
+    <path d="M20 20l-3.6-3.6" />
+  </symbol>
+
+  <symbol id="i-chevron-left" viewBox="0 0 24 24">
+    <path d="M14.5 5.5L8 12l6.5 6.5" />
+  </symbol>
+
+  <symbol id="i-chevron-right" viewBox="0 0 24 24">
+    <path d="M9.5 5.5L16 12l-6.5 6.5" />
+  </symbol>
+
+  <symbol id="i-arrow-right" viewBox="0 0 24 24">
+    <path d="M4.5 12h15M13.5 6l6 6-6 6" />
+  </symbol>
+
+  <symbol id="i-close" viewBox="0 0 24 24">
+    <path d="M6 6l12 12M18 6L6 18" />
+  </symbol>
+
+  <symbol id="i-menu" viewBox="0 0 24 24">
+    <path d="M4 7h16M4 12h16M4 17h16" />
+  </symbol>
+
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="8.5" />
+    <path d="M12 7.5V12l3 1.8" />
+  </symbol>
+
+  <symbol id="i-film" viewBox="0 0 24 24">
+    <rect x="3" y="4.5" width="18" height="15" rx="2" />
+    <path d="M8 4.5v15M16 4.5v15M3 12h18M3 8.2h5M16 8.2h5M3 15.8h5M16 15.8h5" />
+  </symbol>
+
+  {% comment %}The brand mark: three connected nodes, i.e. a tiny movie graph.{% endcomment %}
+  <symbol id="i-graph" viewBox="0 0 24 24">
+    <path d="M7 8.5L17 6.2M7 8.5l5.4 8.6M17 6.2l-4.6 10.9" fill="none" stroke="currentColor"
+          stroke-width="1.5" stroke-opacity="0.65" stroke-linecap="round" />
+    <circle cx="7" cy="8.5" r="3" fill="currentColor" stroke="none" />
+    <circle cx="17.4" cy="6.2" r="2.2" fill="currentColor" fill-opacity="0.8" stroke="none" />
+    <circle cx="12.6" cy="17.4" r="2.6" fill="currentColor" fill-opacity="0.9" stroke="none" />
+  </symbol>
+
+  <symbol id="i-robot" viewBox="0 0 24 24">
+    <rect x="3" y="11" width="18" height="10" rx="2" />
+    <circle cx="12" cy="5" r="2" />
+    <path d="M12 7v4" />
+    <line x1="8" y1="16" x2="8.01" y2="16" />
+    <line x1="16" y1="16" x2="16.01" y2="16" />
+  </symbol>
+</svg>

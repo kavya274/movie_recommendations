@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Page not found · MovieGraph{% endblock %}
+
+{% block content %}
+  <div class="page-gutter shell error-page">
+    <div class="empty-icon"><svg class="icon icon-md"><use href="#i-film"></use></svg></div>
+    <h1>We couldn't find that page</h1>
+    <p>The movie may have been removed from the catalog, or the link is wrong.</p>
+    <a href="{% url 'catalog:discover' %}" class="btn btn-primary">Back to discover</a>
+  </div>
+{% endblock %}
