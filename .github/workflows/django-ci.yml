@@ -28,5 +28,7 @@ jobs:
 
     # 4. Django check error
     - name: Check for Syntax Errors
+      env:
+        OPENAI_API_KEY: "dummy-key-for-testing"
       run: |
         python manage.py check
